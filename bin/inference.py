@@ -21,9 +21,6 @@ from transformers import (
     LlamaForCausalLM
 )
 import numpy as np
-from msh.modeling_moonshot import MoonshotForCausalLM, MoonshotModel
-from msh.tokenization_moonshot import MoonshotTokenizer
-from msh.configuration_moonshot import MoonshotConfig
 
 from supervised_finetuning import get_conv_template
 
