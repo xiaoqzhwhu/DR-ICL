@@ -264,7 +264,7 @@ def eval_items_ranking(actual_items, predicted_items, k):
     return precision_k, recall_k, ndcg_k
 
 def eval_reranking(gold_text, predict_text, task_name):
-    if task_name == "CMedQAv1-reranking" or task_name == "askubuntudupquestions-reranking":
+    if task_name == "cMedQAReranking" or task_name == "AskUbuntuDupQuestions":
         precision_k = []
         recall_k = []
         ndcg_k = []
@@ -299,7 +299,7 @@ def eval_reasoning(gold_text, predict_text, task_name):
     if task_name == "GSM8K":
         acc = eval_gsm8k(gold_text, predict_text)
         return acc
-    if task_name == "LSAT":
+    if task_name == "AR-LSAT":
         acc = eval_mmlu(gold_text, predict_text)
         return acc
 
@@ -309,31 +309,28 @@ def eval_retrieval(gold_text, predict_text, task_name):
         return acc
 
 def eval_clustering(gold_text, predict_text, task_name):
-    if task_name == "CLSClusteringP2P" or task_name == "CLSClusteringS2S" or task_name == "tenkgnad-clustering-p2p" \
-        or task_name == "tenkgnad-clustering-s2s" or task_name == "arxiv-clustering-s2s":
+    if task_name == "CLSClusteringP2P" or task_name == "CLSClusteringS2S" or task_name == "TenkgnadClusteringP2P" \
+        or task_name == "TenkgnadClusteringS2S" or task_name == "ArxivClusteringS2S":
         acc = eval_clustering(gold_text, predict_text)
         return acc
 
 def eval_qa(gold_text, predict_text, task_name):
     # eval_acc_metrics(gold_text, predict_text)
-    if task_name == "boolq" or task_name == "navigate":
+    if task_name == "BoolQ":
         acc = eval_boolq(gold_text, predict_text)
         return acc
-    if task_name == "truthfulqa":
+    if task_name == "TruthfulQA":
         acc = eval_truthfulqa(gold_text, predict_text)
         return acc
-    if task_name == "MMLU" or task_name == "OPENBOOK" or task_name == "arc":
+    if task_name == "MMLU" or task_name == "OpenbookQA" or task_name == "ARC":
         acc = eval_mmlu(gold_text, predict_text)
         return acc
 
 def eval_classification(gold_text, predict_text, task_name):
-    if task_name == "imdb":
-        acc = eval_imdb(gold_text, predict_text)
-        return acc
-    if task_name == "amazon_counterfactual" or task_name == "toxic_conversations_50k" or task_name == "tweet_sentiment_extraction":
+    if task_name == "ToxicConversations" or task_name == "TweetSentimentExtraction":
         acc = eval_sentiment(gold_text, predict_text)
         return acc
-    if task_name == "winowhy":
+    if task_name == "WinoWhy":
         acc = eval_winowhy(gold_text, predict_text)
         return acc
     
