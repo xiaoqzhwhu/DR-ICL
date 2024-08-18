@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 #### 2、Prepare data
 
-The whole ICLB dataset will release later...
+The whole ICLB dataset will release after acceptance.
 
 - ##### Data Examples
 
