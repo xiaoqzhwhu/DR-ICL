@@ -1,4 +1,4 @@
-# DR-ICL
+# DrICL
 
 #### 1、Prepare environment
 
@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 #### 2、Prepare data
 
-The whole MICLB dataset is published [here](https://drive.google.com/drive/folders/1n_EpYf_K7tx0VWNVCFp4_yNKyN6AyScs?usp=drive_link).
+The whole ICL-50 dataset is published [here](https://drive.google.com/drive/folders/1n_EpYf_K7tx0VWNVCFp4_yNKyN6AyScs?usp=drive_link).
 
 - ##### Data Examples
 
